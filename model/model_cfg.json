@@ -1,0 +1,7 @@
+{
+    "model": "model_tf_iou.pb",
+    "inp_name": "input_1",
+    "out_name": "lambda_1/Reshape",
+    "pad_size": 64,
+    "crop_size": 1024
+}
