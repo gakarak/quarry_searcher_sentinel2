@@ -14,5 +14,5 @@ images (only inference part)
 
 To avoid hell of library dependencies and
 application deployment and launch use the
-[Docker-file]() in project.
+[Docker-file](docker/readme_docker.md) in project.
 
