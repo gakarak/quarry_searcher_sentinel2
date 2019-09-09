@@ -30,10 +30,41 @@ fels 35UNV S2 2017-09-20 2017-09-30 -c 0.1 -o data_s2
 ```
 
 ###### (2) convert&comress raw sendownload sentinel2 example data
-convert data and move into 
+convert data and move into $wdir/data directory 
 
 ```bash
 python $wdir/compress_sentinel_l1c.py -i=data_s2/S2A_MSIL1C_20170926T092021_N0205_R093_T35UNV_20170926T092024.SAFE/GRANULE/L1C_T35UNV_A011816_20170926T092024/IMG_DATA
-mv data_s2/S2A_MSIL1C_20170926T092021_N0205_R093_T35UNV_20170926T092024.SAFE/GRANULE/L1C_T35UNV_A011816_20170926T092024/IMG_DATA/s2_u8.jp2 $wdir/s2_u8_35UNV_2017-09-26.jp2
+mv data_s2/S2A_MSIL1C_20170926T092021_N0205_R093_T35UNV_20170926T092024.SAFE/GRANULE/L1C_T35UNV_A011816_20170926T092024/IMG_DATA/s2_u8.jp2 $wdir/data/s2_u8_35UNV_2017-09-26.jp2
 
 ```
+
+###### (3) prepare images for regions
+preapre with a qgis geometry of regions-of-intereset and clip compressed s2-data
+with this geometry. For example you can use $wdir/data/data_test/s2_u8_35UNV_geom1.gpkg geom
+
+```bash
+python clip_raster_by_geom.py -i=$wdir/data/data_test/s2_u8_35UNV_2017-09-26.jp2 -g=$wdir/data/data_test/s2_u8_35UNV_geom1.gpkg -a=type
+```
+
+###### (4) generate probability map and vectorized geometry
+for example you can use $wdir/data/test_data/s2_u8_35UNV_2017-09-26_t4.tif file
+
+```bash
+python quarry_searcher_s2_pmap.py -i=$wdir/data/data_test/s2_u8_35UNV_2017-09-26_t4.tif -c=$wdir/model/model_cfg.json
+```
+
+at the end you will get two additional files,
+a raster one with a probability map (*_pmap.tif)
+and vector (*_pmap_vec.gpkg) with the boundaries of
+the quarries found:
+
+you can use qgis to visualize the results:
+
+![exmaple-pmap](img/pmap_example1.png)
+
+---
+
+
+ #### Usage example (with a Docker)
+ 
+ coming soon...
