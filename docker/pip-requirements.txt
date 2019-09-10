@@ -44,3 +44,4 @@ wget
 xgboost
 Fiona
 fels
+GDAL==2.4.2
