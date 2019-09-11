@@ -88,3 +88,8 @@ ENV CUDA_HOME=/usr/local/cuda
 RUN pip --no-cache-dir install \
     tensorflow-gpu \
     keras
+
+
+# (GPU.3) install pytorch-stable
+RUN pip --no-cache-dir install torch torchvision
+
