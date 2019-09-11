@@ -67,4 +67,5 @@ you can use qgis to visualize the results:
 
  #### Usage example (with a Docker)
  
- coming soon...
+ Please read additional [docker-support doc](docker/readme_docker.md)
+
