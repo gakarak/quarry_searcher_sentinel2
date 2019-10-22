@@ -18,7 +18,7 @@ You can use builded docker container from [my](https://hub.docker.com/u/alxkalin
 Please pull docker container:
 
 ```
-docker pull docker pull alxkalinovsky/docker-dl-cuda10-py36:latest
+docker pull alxkalinovsky/docker-dl-cuda10-py36:latest
 ```
 
 Check that all is ok with command:
