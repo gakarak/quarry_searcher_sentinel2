@@ -1,0 +1,20 @@
+{
+    "trn": "idx-crop_p500_r2_trn0.txt",
+    "val": "idx-crop_p500_r2_val0.txt",
+    "model": {
+    "type": "unet1",
+        "inp": 5,
+        "out": 1,
+        "params": {
+            "bn": true,
+            "nlin": "relu"
+        }
+    },
+    "lr_scheduler": null,
+    "crop_size": 128,
+    "loss": "bcedice",
+    "loss_val": ["bce", "iou", "dice", "bceiou", "bcedice"],
+    "batch_size": 16,
+    "iter_per_epoch": 200,
+    "epochs": 400
+}

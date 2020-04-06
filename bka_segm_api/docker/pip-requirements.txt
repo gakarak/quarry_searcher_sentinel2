@@ -1,0 +1,15 @@
+geopandas
+ipython
+matplotlib
+numpy
+opencv-contrib-python-headless
+opencv-python-headless
+pandas
+pyproj
+requests
+Rtree
+scikit-image
+scikit-learn
+scipy
+fire
+Fiona

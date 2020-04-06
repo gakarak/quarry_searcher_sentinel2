@@ -1,0 +1,5 @@
+/models/*/*.ckpt
+/models/cfg-p500r2-s1-bcedice_unet1_i5_o1_hCNN_b1_relu_c128_bcedice/
+/models/cfg-p500r2-s2-bcedice_unet1_i5_o1_hCNN_b1_relu_c128_bcedice/
+/cfg-p500r2-s1-bcedice.json
+/cfg-p500r2-s2-bcedice.json
