@@ -18,7 +18,7 @@ application deployment and launch use the
 
 
 #### Usage example (python-commands, )
-The distribution directory will be referred to below as $ wdir
+The distribution directory will be referred to below as $wdir
 
 
 ###### (1) download sentinel2 example data
