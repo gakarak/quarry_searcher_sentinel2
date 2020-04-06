@@ -153,3 +153,5 @@ or
 cd $wdir/bka_segm_api/tests
 make predict-cpu
 ```
+
+![exmaple-pmap](img/example1.png)
