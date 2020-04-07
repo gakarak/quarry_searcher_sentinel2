@@ -71,7 +71,6 @@ docker run -v=$PWD/data-test/sample01:/data -v=$PWD:/src -w=/src -it alxkalinovs
     /data/4064423-0220-PAN-C-1-1-1232982-190827T085538-BY.tif \
     /data/4064423-0220-MUL-C-1-1-1232982-190827T085538-BY.tif \
     /data/geom-4064423-0220.gpkg \
-    --no_split \
     --out=/data/clip_geom
 ```
 
@@ -101,7 +100,7 @@ for CPU version:
 docker run -v=$PWD/data-test/sample01:/data -v=$PWD:/src -w=/src -it alxkalinovsky/uiip-dl-bka-cpu:latest \
     python3 -m run.bka_predict_mask \ 
     -p=/data/clip_bbox_PAN.tif \
-    -m=/data/clip_bbox_PAN.tif \
+    -m=/data/clip_bbox_MUL.tif \
     -o /data/clip_bbox_cpu
 ```
 
@@ -111,7 +110,7 @@ or GPU version:
 docker run --gpus=all -v=$PWD/data-test/sample01:/data -v=$PWD:/src -w=/src -it alxkalinovsky/uiip-dl-bka-gpu:latest \
     python3 -m run.bka_predict_mask \ 
     -p=/data/clip_bbox_PAN.tif \
-    -m=/data/clip_bbox_PAN.tif \
+    -m=/data/clip_bbox_MUL.tif \
     -o /data/clip_bbox_gpu
 ```
 
